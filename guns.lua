@@ -95,7 +95,9 @@ if SHOOTER_ENABLE_CRAFTING == true then
 	minetest.register_craft({
 		output = "shooter:ammo",
 		recipe = {
-			{"tnt:gunpowder", "default:bronze_ingot"},
+			{ '', 'moreores:tin_ingot', '' },
+			{ 'default:paper', 'tnt:gunpowder', 'default:paper' },
+			{ '', 'default:copper_ingot', '' }
 		},
 	})
 end
