@@ -49,10 +49,10 @@ for _,v in ipairs(SHOOTER_ENTITIES) do
 	allowed_entities[v] = 1
 end
 
-local modpath = minetest.get_modpath(minetest.get_current_modname())
-local input = io.open(modpath.."/shooter.conf", "r")
+local worldpath = minetest.get_worldpath()
+local input = io.open(worldpath.."/shooter.conf", "r")
 if input then
-	dofile(modpath.."/shooter.conf")
+	dofile(worldpath.."/shooter.conf")
 	input:close()
 	input = nil
 end
